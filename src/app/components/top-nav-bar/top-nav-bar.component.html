@@ -1,3 +1,4 @@
 <div class="card">
-    <p-tabMenu [model]="items" class="tabMenuItemCustom"/>
+    <p-tabMenu [model]="items" class="tabMenuItemCustom" (activeItemChange)="onActiveItemChange($event)" />
+
 </div>
