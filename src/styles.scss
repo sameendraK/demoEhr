@@ -1,2 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
-@import '../node_modules/primeng/resources/themes/saga-blue/theme.css'
+@import '../node_modules/primeng/resources/themes/saga-blue/theme.css';
+/* angular-cli file: src/styles.css */
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+app-filter {
+    display: flex;
+    gap: 35px;
+    height: 100%;
+    padding: 5px
+}
+
+// @import 'bootstrap/scss/bootstrap';
+/* Importing Bootstrap SCSS file. */
