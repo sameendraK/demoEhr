@@ -1,0 +1,9 @@
+.doctor-card-wrapper-container {
+    .doctor-card-container {
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 40px;
+        background-color: yellow;
+        gap:20px;
+    }
+}

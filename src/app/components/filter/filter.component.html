@@ -1,0 +1,39 @@
+<ng-container *ngFor="let filterCriteria of filterCriterias">
+    <div class="filter-wrapper-container">
+        <ng-container *ngIf="filterCriteria.filterType.toUpperCase()===FilterTypes.DROPDOWN.toUpperCase()">
+            <ng-container *ngTemplateOutlet="dropDown;context:{$implicit:filterCriteria}">
+            </ng-container>
+        </ng-container>
+        <ng-container *ngIf="filterCriteria.filterType.toUpperCase()===FilterTypes.TEXT.toUpperCase()">
+            <ng-container *ngTemplateOutlet="text;context:{$implicit:filterCriteria}">
+            </ng-container>
+        </ng-container>
+        <ng-container class="common-ng-container">
+            <ng-template #dropDown let-filterCriteria>
+                <div class="dropdown-filter-container">
+                    <label>
+                        {{filterCriteria.label}}
+                    </label>
+                    <select title="Select">
+                        <option *ngFor="let item of filterCriteria.speciality">
+                            {{item}}
+                        </option>
+                    </select>
+                </div>
+            </ng-template>
+
+            <ng-template #text let-filterCriteria>
+                <div class="text-container">
+                    <div class="label-container">
+                        <label>
+                            {{filterCriteria.label}}
+                        </label>
+                    </div>
+                    <div class="filter-container">
+                        <input type="text" placeholder={{filterCriteria.val}}>
+                    </div>
+                </div>
+            </ng-template>
+        </ng-container>
+    </div>
+</ng-container>

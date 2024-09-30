@@ -1,4 +1,9 @@
-<div class="card">
-    <p-tabMenu [model]="items" class="tabMenuItemCustom" (activeItemChange)="onActiveItemChange($event)" />
-
+<div class="card flex">
+    <div class="wrapper">
+        <p-tabMenu [model]="items" class="tabMenuItemCustom" (activeItemChange)="onActiveItemChange($event)" />
+    </div>
+    <!-- <div>
+        <p-menu [model]="patientItems" />
+    </div> -->
+  
 </div>

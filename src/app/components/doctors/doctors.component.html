@@ -1,0 +1,10 @@
+<div class="doctors-component-wrapper-container">
+    <div class="filter-container">
+        <app-filter [filterCriterias]="filterCriterias"></app-filter>
+    </div>
+    <div class="doctors-component-container">
+        <div class="doctor-card-component-container" *ngFor="let detail of doctorCardDetails">
+            <app-doctor-card [doctorCardDetails]="detail"></app-doctor-card>
+        </div>
+    </div>
+</div>
